@@ -1,4 +1,4 @@
-Feature: Assessed value Scenario zero case five
+Feature: Assessed value Scenario zero case Five
 
   Background: Login page
     Given I am a logged in user
@@ -54,13 +54,14 @@ Feature: Assessed value Scenario zero case five
     And I click on "London building"
     And I am on "Service requirements" page
     And I click on "Answer question"
+    And I am on "Lifts, hoists & conveyance systems maintenance" page
+    And I enter 300 for first lift
+    And I click on "Save and return to service information"
+    And I click on "Answer question"
+
     And I am on "Planned maintenance (PPM) services standards" page
     And I select standard A for first service
     And I select standard A for second service
-    And I click on "Save and return to service information"
-    And I click on "Answer question"
-    And I am on "Lifts, hoists & conveyance systems maintenance" page
-    And I enter 300 for first lift
     And I click on "Save and return to service information"
     And I click on "Answer question"
     And I am on "Service information volumes" page
@@ -74,13 +75,13 @@ Feature: Assessed value Scenario zero case five
     And I click on "Outside London building"
     And I am on "Service requirements" page
     And I click on "Answer question"
+    And I am on "Lifts, hoists & conveyance systems maintenance" page
+    And I enter 300 for first lift
+    And I click on "Save and return to service information"
+    And I click on "Answer question"
     And I am on "Planned maintenance (PPM) services standards" page
     And I select standard A for first service
     And I select standard A for second service
-    And I click on "Save and return to service information"
-    And I click on "Answer question"
-    And I am on "Lifts, hoists & conveyance systems maintenance" page
-    And I enter 300 for first lift
     And I click on "Save and return to service information"
     And I click on "Answer question"
     And I am on "Service information volumes" page

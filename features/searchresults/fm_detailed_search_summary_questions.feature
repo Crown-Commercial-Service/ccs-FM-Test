@@ -181,7 +181,8 @@ Feature:  Facilities Management - Detailed Search Summary - Question Links - Con
     And I click on "Save and return to detailed search"
     And I am on "Detailed search summary" page
     And I click to answer services question
-    And I am on the "What facilities management services do you need for each building?" page
+    And I am on "Which facilities management services do you need for each building?" page
+    And I select all services
     And I click on "Save and return to detailed search summary"
     And I am on "Detailed search summary" page
 

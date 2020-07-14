@@ -1,4 +1,4 @@
-Feature: Assessed value Scenario one building
+Feature: Assessed value Scenario zero case Four
 
   Background: Login page
     Given I am a logged in user
@@ -14,7 +14,7 @@ Feature: Assessed value Scenario one building
     And I click on the "Helpdesk services"
     And I click on "Close all"
 
-  Scenario Outline: Scenario 1 - CP, No CAFM, Helpdesk TUPE, V is within of 30% (Neg Left boundary)
+  Scenario Outline: Scenario 4 - CP, No CAFM, Helpdesk TUPE, V is within of 30% (Neg Left boundary)
     And I click on "Continue"
     And I click on open all
     And I click on the "Tees Valley and Durham"

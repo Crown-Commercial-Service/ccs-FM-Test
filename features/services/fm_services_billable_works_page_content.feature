@@ -10,7 +10,7 @@ Feature:  Facilities Management - Services - Management of Billable Works - Page
 
   Scenario: FM - Services - Management of Billable Works - Content
 
-    When I click on "Management of Billable Works"
+    When I click on "Management of billable works"
     Then I should see text "No services selected"
     When I select all services listed for Management of billable works
     Then I should see text "1 Service selected"

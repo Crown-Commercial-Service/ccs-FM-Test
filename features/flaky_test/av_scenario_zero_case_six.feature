@@ -1,4 +1,4 @@
-Feature: Assessed value Scenario zero case six
+Feature: Assessed value Scenario zero case Six
 
   Background: Login page
     Given I am a logged in user

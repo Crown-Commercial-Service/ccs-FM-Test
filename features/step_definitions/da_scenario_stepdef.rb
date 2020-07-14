@@ -799,7 +799,7 @@ end
 
 
 And(/^I should see the partial price value (.+)$/) do |value|
-  expect(home.choose_contract_value[1].text).to start_with(value)
+  expect(home.choose_contract_value[0].text).to end_with(value)
 end
 
 Then(/^unpriced service "([^"]*)" should be displayed$/) do |unpriced_service|
