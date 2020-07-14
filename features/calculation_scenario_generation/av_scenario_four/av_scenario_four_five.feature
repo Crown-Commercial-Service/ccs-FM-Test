@@ -23,7 +23,7 @@ Feature: Assessed value Scenario Four Case five
     When I am on detailed search page
     And I click on "Save and continue"
     And I click to answer estimated annual cost question
-    When I am on "Estimated annual cost" and "Do you know your current or estimated annual cost?" page
+    When I am on "Estimated annual cost" page
     And I click on the "facilities_management_procurement_estimated_cost_known_false" option
     And I click on "Save and continue"
     When I am on "TUPE" page
@@ -41,6 +41,10 @@ Feature: Assessed value Scenario Four Case five
     When I am on "Buildings" page
     And I select seventh building "London building" with address "2 Marylebone Road, London, Inner London - West, NW1 4DF"
     And I select twelfth building "Outside London building" with address "10 Kenton Avenue, Manchester, Greater Manchester, M18 7GQ"
+    And I click on "Save and continue"
+    And I select all services for first building
+    And I click on "Outside London building"
+    And I select all services for second building
     And I click on "Save and return to detailed search summary"
     And I click on "London building"
     When I am on "Service requirements" page
@@ -49,22 +53,21 @@ Feature: Assessed value Scenario Four Case five
     And I select standard A for first service
     And I select standard A for second service
     And I select standard A for third service
-    And I click on "Save and return to service requirements"
+    And I click on "Save and return to service information"
     And I click on "Answer question"
-    When I am on "Service requirement volumes" page
+    When I am on "Service information volumes" page
     And I enter 28000 for routine cleaning - AV scenario four
     And I enter 4000 for general waste - AV scenario four
     And I enter 4000 for recycled waste - AV scenario four
-    And I click on "Save and return to service requirements"
+    And I click on "Save and return to service information"
     When I am on "Service requirements" page
     And I click on "Answer question"
     And I select standard A for first service
-    And I click on "Save and return to service requirements"
+    And I click on "Save and return to service information"
     And I click on "Answer question"
-    And I enter 1 for number of personnel
     And I select all day service for Monday
     And I select not required for Tuesday to Sunday
-    And I click on "Save and return to service requirements"
+    And I click on "Save and return to service information"
     And I click on "Back to detailed search summary"
     And I click on "Outside London building"
     And I am on "Service requirements" page
@@ -73,23 +76,22 @@ Feature: Assessed value Scenario Four Case five
     And I select standard A for first service
     And I select standard A for second service
     And I select standard A for third service
-    And I click on "Save and return to service requirements"
+    And I click on "Save and return to service information"
     And I click on "Answer question"
-    When I am on "Service requirement volumes" page
+    When I am on "Service information volumes" page
     And I enter 28000 for routine cleaning - AV scenario four
     And I enter 4000 for general waste - AV scenario four
     And I enter 4000 for recycled waste - AV scenario four
-    And I click on "Save and return to service requirements"
+    And I click on "Save and return to service information"
     When I am on "Service requirements" page
     And I click on "Answer question"
     And I select standard A for first service
-    And I click on "Save and return to service requirements"
+    And I click on "Save and return to service information"
     When I am on "Service requirements" page
     And I click on "Answer question"
-    And I enter 1 for number of personnel
     And I select all day service for Monday
     And I select not required for Tuesday to Sunday
-    And I click on "Save and return to service requirements"
+    And I click on "Save and return to service information"
     And I click on "Back to detailed search summary"
     When I am on "Detailed search summary" page
     And I click on "Continue"

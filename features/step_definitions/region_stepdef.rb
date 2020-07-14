@@ -1,5 +1,5 @@
 And(/^I select all services listed for Management of billable works$/) do
-  home.management_billable.select_all.click
+  home.management_select_all.click
 end
 
 And(/^I select all cafm service$/) do

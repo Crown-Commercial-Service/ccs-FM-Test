@@ -28,7 +28,7 @@ Feature: Assessed value Scenario A - Case Eleven
     And I click on "Save and continue"
     And I am on "Detailed search summary" page
     And I click to answer estimated annual cost question
-    And I am on "Estimated annual cost" and "Do you know your current or estimated annual cost?" page
+    And I am on "Estimated annual cost" page
     And I click on the "facilities_management_procurement_estimated_cost_known_true" option
     And I enter the cost 2850000
     And I click on "Save and continue"
@@ -46,33 +46,33 @@ Feature: Assessed value Scenario A - Case Eleven
     And I click on "Save and continue"
     And I am on "Buildings" page
     And I select seventh building "London building" with address "2 Marylebone Road, London, Inner London - West, NW1 4DF"
+    And I click on "Save and continue"
+    And I select all services
     And I click on "Save and return to detailed search summary"
     And I click on "London building"
     And I am on "Service requirements" page
     And I click on "Answer question"
     And I am on "Planned maintenance (PPM) services standards" page
     And I select standard A for first service
-    And I click on "Save and return to service requirements"
+    And I click on "Save and return to service information"
     And I click on "Answer question"
-    And I am on "Service requirement volumes" page
+    And I am on "Service information volumes" page
     And I enter 18000 for routine cleaning
     And I enter 1300 for general waste
-    And I click on "Save and return to service requirements"
+    And I click on "Save and return to service information"
     And I click on "Answer question"
     And I select standard A for first service
-    And I click on "Save and return to service requirements"
+    And I click on "Save and return to service information"
     And I click on "Answer question"
     And I am on "Handyman services" page
-    And I enter 1 for number of personnel
     And I select all day service for Monday to Friday
     And I select all day service for Saturday and Sunday
-    And I click on "Save and return to service requirements"
+    And I click on "Save and return to service information"
     And I click on "Answer question"
     And I am on "Reception service" page
-    And I enter 1 for number of personnel
     And I select all day service for Monday to Friday
     And I select all day service for Saturday and Sunday
-    And I click on "Save and return to service requirements"
+    And I click on "Save and return to service information"
     And I click on "Back to detailed search summary"
     And I click on "Continue"
     And I should see the price displayed £14,853,807.63

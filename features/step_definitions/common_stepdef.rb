@@ -524,7 +524,7 @@ Then(/^I click on a back to service information$/) do
 end
 
 Then(/^I click on answer question link for lifts$/) do
-  home.answer_question[8].click
+  home.answer_question[4].click
 end
 
 Then(/^I click on continue$/) do
@@ -606,7 +606,7 @@ end
 
 
 Then(/^I click on save and return to service requirements$/) do
-  click_on 'Save and return to service requirements'
+  click_on 'Save and return to service information'
 end
 
 Then(/^I click on back to detailed search summary$/) do
@@ -655,13 +655,13 @@ Then(/^I answer contract period question/) do
   step "I select no option for optional call-off extension"
   step "I click on save and continue"
   step "I select first building"
-  step "I click on save and return to detailed search summary"
+  step "I click on save and continue"
 end
 
 Then(/^I answer services question/) do
-  # step "I am on building services selection page"
-  # step "I select all services"
-  # step "I click on save and return to detailed search"
+  step "I am on building services selection page"
+  step "I select all services"
+  step "I click on save and return to detailed search"
   step "I click change on building name on detailed search summary"
   step "I am on service requirements page"
   step "I click on answer question"

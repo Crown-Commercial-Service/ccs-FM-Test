@@ -22,11 +22,14 @@ Feature: Direct Award scenario One
     And I click on "Save and continue"
     And I answer about the contract question
     And I answer contract period question
+    And I am on building services selection page
+    And I select all services
+    And I click on save and return to detailed search
     And I click change on building name on detailed search summary
     And I am on "Service requirements" page
     And I click on "Answer question"
     And I am on "Planned maintenance (PPM) services standards" page
-    And I click on "Save and return to service requirements"
+    And I click on "Save and return to service information"
     Then I should see error message header "There is a problem"
     Then I should see the following error messages
       | Select level of standard for your building management system (BMS) maintenance        |
@@ -38,11 +41,11 @@ Feature: Direct Award scenario One
       | Select level of standard for your security, access and intruder systems maintenance   |
       | Select level of standard for your standby power system maintenance                    |
       | Select level of standard for your ventilation and air conditioning system maintenance |
-    And I click on "Back to service requirements"
+    And I click on "Back to service information"
     And I click on answer question link for lifts
     And I enter 1000 for first lift
     And I click on "Add new lift (98 remaining)"
-    And I click on "Save and return to service requirements"
+    And I click on "Save and return to service information"
     Then I should see the following error messages
       | There is a problem|
       | Enter a whole number between 1 and 999, like 100.                    |

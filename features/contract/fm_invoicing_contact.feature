@@ -19,7 +19,7 @@ Feature:  Facilities Management - Contract Details - Invoicing Contact
 #    And I click on "Save and continue"
 #    And I am on "Detailed search summary" page
 #    And I click to answer estimated annual cost question
-#    And I am on "Estimated annual cost" and "Do you know your current or estimated annual cost?" page
+#    And I am on "Estimated annual cost" page
 #    And I click on the "facilities_management_procurement_estimated_cost_known_false" option
 #    And I click on "Save and continue"
 #    And I am on "TUPE" page
@@ -46,7 +46,7 @@ Feature:  Facilities Management - Contract Details - Invoicing Contact
 #    And I click on "Answer question"
 #    And I am on "Planned maintenance (PPM) services standards" page
 #    And I select standard A for "Mechanical and electrical engineering maintenance"
-#    And I click on "Save and return to service requirements"
+#    And I click on "Save and return to service information"
 #    And I click on "Back to detailed search summary"
 #    And I click on "Continue"
 #    And I click on the Direct award route to market

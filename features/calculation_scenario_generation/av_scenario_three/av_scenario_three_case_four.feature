@@ -28,7 +28,7 @@ Feature: Assessed value Scenario Three - Case Four
     And I click on "Save and continue"
     And I am on "Detailed search summary" page
     And I click to answer estimated annual cost question
-    And I am on "Estimated annual cost" and "Do you know your current or estimated annual cost?" page
+    And I am on "Estimated annual cost" page
     And I click on the "facilities_management_procurement_estimated_cost_known_false" option
     And I click on "Save and continue"
     And I am on "TUPE" page
@@ -45,6 +45,8 @@ Feature: Assessed value Scenario Three - Case Four
     And I click on "Save and continue"
     And I am on "Buildings" page
     And I select seventh building "London building" with address "2 Marylebone Road, London, Inner London - West, NW1 4DF"
+    And I click on "Save and continue"
+    And I select all services
     And I click on "Save and return to detailed search summary"
     And I click on "London building"
     And I am on "Service requirements" page
@@ -53,19 +55,19 @@ Feature: Assessed value Scenario Three - Case Four
     And I select standard A for first service
     And I select standard A for second service
     And I select standard A for third service
-    And I click on "Save and return to service requirements"
+    And I click on "Save and return to service information"
     And I click on "Answer question"
-    And I am on "Service requirement volumes" page
+    And I am on "Service information volumes" page
     And I enter 10000 for mobile cleaning services
     And I enter 30000 for general waste
     And I enter 30000 for recycled waste
-    And I click on "Save and return to service requirements"
+    And I click on "Save and return to service information"
     And I click on "Answer question"
     And I select standard A for first service
-    And I click on "Save and return to service requirements"
+    And I click on "Save and return to service information"
     And I click on "Back to detailed search summary"
     And I click on "Continue"
-    And I should see the "Estimated contract cost" page
+    And I should see the "Contract value" page
     And I should see the partial price value £23,092,200
     And unpriced service "Professional snow & ice clearance" should be displayed
 

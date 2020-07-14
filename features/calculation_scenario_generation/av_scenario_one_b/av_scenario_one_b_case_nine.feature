@@ -27,7 +27,7 @@ Feature: Assessed value Scenario B - Case Nine
     And I click on "Save and continue"
     And I am on "Detailed search summary" page
     And I click to answer estimated annual cost question
-    And I am on "Estimated annual cost" and "Do you know your current or estimated annual cost?" page
+    And I am on "Estimated annual cost" page
     And I click on the "facilities_management_procurement_estimated_cost_known_true" option
     And I enter the cost 9172000
     And I click on "Save and continue"
@@ -45,27 +45,28 @@ Feature: Assessed value Scenario B - Case Nine
     And I click on "Save and continue"
     And I am on "Buildings" page
     And I select seventh building "London building" with address "2 Marylebone Road, London, Inner London - West, NW1 4DF"
+    And I click on "Save and continue"
+    And I select all services
     And I click on "Save and return to detailed search summary"
     And I click on "London building"
     And I am on "Service requirements" page
     And I click on "Answer question"
     And I am on "Planned maintenance (PPM) services standards" page
     And I select standard A for first service
-    And I click on "Save and return to service requirements"
+    And I click on "Save and return to service information"
     And I click on "Answer question"
-    And I am on "Service requirement volumes" page
+    And I am on "Service information volumes" page
     And I enter 3400 for routine cleaning
     And I enter 13000 for general waste scenario one b
-    And I click on "Save and return to service requirements"
+    And I click on "Save and return to service information"
     And I click on "Answer question"
     And I select standard A for first service
-    And I click on "Save and return to service requirements"
+    And I click on "Save and return to service information"
     And I click on "Answer question"
     And I am on "Reception service" page
-    And I enter 1 for number of personnel
     And I select all day service for Monday to Friday
     And I select not required for Saturday and Sunday
-    And I click on "Save and return to service requirements"
+    And I click on "Save and return to service information"
     And I click on "Back to detailed search summary"
     And I click on "Continue"
     And I should see the price displayed £14,681,047.13

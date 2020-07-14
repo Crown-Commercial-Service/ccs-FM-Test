@@ -202,7 +202,7 @@ Feature:  FM - Accessibility
     And I click on "Save and continue"
     And I am on "Detailed search summary" page
     And I click to answer estimated annual cost question
-    And I am on "Estimated annual cost" and "Do you know your current or estimated annual cost?" page
+    And I am on "Estimated annual cost" page
     Then the page should be accessible
 
   Scenario: FM - Start a new procurement page - TUPE
@@ -412,7 +412,7 @@ Feature:  FM - Accessibility
     And I answer about the contract question
     And I answer contract period question
     And I answer services question
-    And I should see the "Estimated contract cost" page
+    And I should see the "Contract value" page
     Then the page should be accessible
 
 

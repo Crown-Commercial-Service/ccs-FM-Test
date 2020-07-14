@@ -23,7 +23,6 @@ Feature:  Facilities Management - Detailed Search Summary - Question Links - Con
     And I click on select all for Scotland
     And I click on select all for Northern Ireland
     And I should see text "73 Regions selected"
-    And I should see text "2 Regions selected"
     And I click on "Close all"
     And I click on "Continue"
     And I am on "Results" page
@@ -44,7 +43,7 @@ Feature:  Facilities Management - Detailed Search Summary - Question Links - Con
     And I click on "Save and continue"
     And I click on "Save and continue"
     And I click to answer estimated annual cost question
-    And I am on "Estimated annual cost" and "Do you know your current or estimated annual cost?" page
+    And I am on "Estimated annual cost" page
     And I click on "Save and return to detailed search"
     Then I should see the following error messages
       |There is a problem|
@@ -61,7 +60,7 @@ Feature:  Facilities Management - Detailed Search Summary - Question Links - Con
     And I click on "Save and continue"
     And I click on "Save and continue"
     And I click to answer estimated annual cost question
-    And I am on "Estimated annual cost" and "Do you know your current or estimated annual cost?" page
+    And I am on "Estimated annual cost" page
     And I click on the "facilities_management_procurement_estimated_cost_known_true" option
     And I enter the cost 99999999999
     And I click on "Save and continue"
@@ -78,7 +77,7 @@ Feature:  Facilities Management - Detailed Search Summary - Question Links - Con
     And I click on "Save and continue"
     And I click on "Save and continue"
     And I click to answer estimated annual cost question
-    And I am on "Estimated annual cost" and "Do you know your current or estimated annual cost?" page
+    And I am on "Estimated annual cost" page
     And I click on the "facilities_management_procurement_estimated_cost_known_true" option
     And I click on "Save and continue"
     Then I should see the following error messages
@@ -94,7 +93,7 @@ Feature:  Facilities Management - Detailed Search Summary - Question Links - Con
     And I click on "Save and continue"
     And I click on "Save and continue"
     And I click to answer estimated annual cost question
-    And I am on "Estimated annual cost" and "Do you know your current or estimated annual cost?" page
+    And I am on "Estimated annual cost" page
     And I click on the "facilities_management_procurement_estimated_cost_known_true" option
     And I enter the cost 500000
     And I click on "Save and return to detailed search"
@@ -106,7 +105,7 @@ Feature:  Facilities Management - Detailed Search Summary - Question Links - Con
     And I click on "Save and continue"
     And I click on "Save and continue"
     And I click to answer estimated annual cost question
-    And I am on "Estimated annual cost" and "Do you know your current or estimated annual cost?" page
+    And I am on "Estimated annual cost" page
     And I click on the "facilities_management_procurement_estimated_cost_known_true" option
     And I enter the cost 500000
     And I click on "Save and return to detailed search"

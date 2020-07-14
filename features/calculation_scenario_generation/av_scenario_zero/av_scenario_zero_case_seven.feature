@@ -1,4 +1,4 @@
-Feature: Assessed value Scenario one building
+Feature: Assessed value Scenario Zero - seven
 
   Background: Login page
     Given I am a logged in user
@@ -16,8 +16,6 @@ Feature: Assessed value Scenario one building
     And I click on "Close all"
 
 
-
-
   Scenario Outline: Scenario 7-  CP, CAFM, Helpdesk TUPE (Lot 1C)
     And I click on "Continue"
     And I click on open all
@@ -29,7 +27,7 @@ Feature: Assessed value Scenario one building
     And I click on "Save and continue"
     And I am on "Detailed search summary" page
     And I click to answer estimated annual cost question
-    And I am on "Estimated annual cost" and "Do you know your current or estimated annual cost?" page
+    And I am on "Estimated annual cost" page
     And I click on the "facilities_management_procurement_estimated_cost_known_true" option
     And I enter the cost 50000000
     And I click on "Save and continue"
@@ -48,54 +46,58 @@ Feature: Assessed value Scenario one building
     And I am on "Buildings" page
     And I select seventh building "London building" with address "2 Marylebone Road, London, Inner London - West, NW1 4DF"
     And I select twelfth building "Outside London building" with address "10 Kenton Avenue, Manchester, Greater Manchester, M18 7GQ"
+    And I click on "Save and continue"
+    And I select all services for first building
+    And I click on "Outside London building"
+    And I select all services for second building
     And I click on "Save and return to detailed search summary"
     And I click on "London building"
     And I am on "Service requirements" page
     And I click on "Answer question"
-    And I am on "Planned maintenance (PPM) services standards" page
-    And I select standard A for first service
-    And I select standard A for second service
-    And I click on "Save and return to service requirements"
-    And I click on "Answer question"
     And I am on "Lifts, hoists & conveyance systems maintenance" page
     And I enter 600 for lift one
     And I enter 600 for lift two
     And I enter 600 for lift three
     And I enter 600 for lift four
     And I enter 600 for lift five
-    And I click on "Save and return to service requirements"
+    And I click on "Save and return to service information"
     And I click on "Answer question"
-    And I am on "Service requirement volumes" page
+    And I am on "Planned maintenance (PPM) services standards" page
+    And I select standard A for first service
+    And I select standard A for second service
+    And I click on "Save and return to service information"
+    And I click on "Answer question"
+    And I am on "Service information volumes" page
     And I enter 1300 for portable appliance testing
     And I enter 1300 for mobile cleaning service two
-    And I click on "Save and return to service requirements"
+    And I click on "Save and return to service information"
     And I click on "Answer question"
     And I select standard A for first service
-    And I click on "Save and return to service requirements"
+    And I click on "Save and return to service information"
     And I click on "Back to detailed search summary"
     And I click on "Outside London building"
     And I am on "Service requirements" page
     And I click on "Answer question"
-    And I am on "Planned maintenance (PPM) services standards" page
-    And I select standard A for first service
-    And I select standard A for second service
-    And I click on "Save and return to service requirements"
-    And I click on "Answer question"
     And I am on "Lifts, hoists & conveyance systems maintenance" page
     And I enter 600 for lift one
     And I enter 600 for lift two
     And I enter 600 for lift three
     And I enter 600 for lift four
     And I enter 600 for lift five
-    And I click on "Save and return to service requirements"
+    And I click on "Save and return to service information"
     And I click on "Answer question"
-    And I am on "Service requirement volumes" page
+    And I am on "Planned maintenance (PPM) services standards" page
+    And I select standard A for first service
+    And I select standard A for second service
+    And I click on "Save and return to service information"
+    And I click on "Answer question"
+    And I am on "Service information volumes" page
     And I enter 1300 for portable appliance testing
     And I enter 1300 for mobile cleaning service two
-    And I click on "Save and return to service requirements"
+    And I click on "Save and return to service information"
     And I click on "Answer question"
     And I select standard A for first service
-    And I click on "Save and return to service requirements"
+    And I click on "Save and return to service information"
     And I click on "Back to detailed search summary"
     And I click on "Continue"
     And I should see the price displayed £60,861,180.60

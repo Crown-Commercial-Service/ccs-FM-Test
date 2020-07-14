@@ -23,7 +23,7 @@ Feature: Assessed value Scenario Three - Case One
     And I click on "Save and continue"
     And I am on "Detailed search summary" page
     And I click to answer estimated annual cost question
-    And I am on "Estimated annual cost" and "Do you know your current or estimated annual cost?" page
+    And I am on "Estimated annual cost" page
     And I click on the "facilities_management_procurement_estimated_cost_known_false" option
     And I click on "Save and continue"
     And I am on "TUPE" page
@@ -40,16 +40,18 @@ Feature: Assessed value Scenario Three - Case One
     And I am on "Buildings" page
 #    And I select seventh building "London building" with address "2 Marylebone Road, London, Inner London - West, NW1 4DF"
     And I select twelfth building "Outside London building" with address "10 Kenton Avenue, Manchester, Greater Manchester, M18 7GQ"
+    And I click on "Save and continue"
+    And I select all services
     And I click on "Save and return to detailed search summary"
     And I click on "Outside London building"
     And I am on "Service requirements" page
     And I click on "Answer question"
     And I am on "Planned maintenance (PPM) services standards" page
     And I select standard A for first service
-    And I click on "Save and return to service requirements"
+    And I click on "Save and return to service information"
     And I click on "Back to detailed search summary"
     And I click on "Continue"
-    And I should see the "Estimated contract cost" page
+    And I should see the "Contract value" page
     And I should see the partial price value £289,869
     And unpriced service "Professional snow & ice clearance" should be displayed
 
