@@ -84,7 +84,7 @@ Feature: Direct Award scenario Two
     And I click on the "facilities_management_procurement_extensions_required_false" option
     And I click on "Save and continue"
     And I am on "Buildings" page
-    And I select first building "Aberdeen" with address "Marischal College, Broad Street, Aberdeen, Aberdeen and Aberdeenshire, AB10 1AL"
+    And I select first building "Aberdeen" with address "Marischal College, Broad Street, Aberdeen, Aberdeen City And Aberdeenshire, AB10 1AL"
     And I select second building "Belfast Building" with address "8-10, Royal Avenue, Belfast, Belfast, BT1 1DA"
     And I select third building "Birmingham" with address "259 Yardley Green Road, Bordesley Green, Birmingham, West Midlands, B9 5QA"
     And I select fourteen building "Westminster Building" with address "10 Downing Street, London, Inner London - West, SW1A 2AA"
@@ -120,7 +120,7 @@ Feature: Direct Award scenario Two
     And I click on "Belfast Building"
     And I click on "Answer question"
     And I enter 9 for portable appliance testing - DA one
-    And I enter 9 for cleaning of external areas - DA one
+#    And I enter 9 for cleaning of external areas - DA one
     And I enter 9 for mobile cleaning service - DA one
     And I click on "Save and return to service requirements"
     And I click on "Answer question"
