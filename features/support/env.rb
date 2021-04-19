@@ -35,3 +35,6 @@ ENV['HOST'] ||= configure[test_env]['host']
 MAX_OPACITY_WAIT_TIME ||= 120
 require File.dirname(__FILE__) + '/../../features/support/capybara_driver.helper'
 require File.dirname(__FILE__) + '/../../features/support/login_helper'
+
+
+

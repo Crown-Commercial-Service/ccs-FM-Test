@@ -16,7 +16,7 @@ Feature:  FM - Contract period
     And I enter the number of year as "2"
     And I enter the day as "2"
     And I enter the month as "2"
-    And I enter the year as "2021"
+    And I enter the year as "2022"
     And I click on the "facilities_management_procurement_mobilisation_period_required_false" option
     And I click on the "facilities_management_procurement_extensions_required_false" option
 		When I click on "Save and continue"

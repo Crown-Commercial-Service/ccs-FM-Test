@@ -223,10 +223,6 @@ Feature:  FM - Accessibility DA In Draft
     When I click on "false" option
     And I click on "Continue"
     And I am on "New authorised representative details" page
-    And I enter the following details into the form:
-      | Postcode             | SW1W 9SZ        |
-    And I click on "Find address"
-    And I select address "151 Buckingham Palace Road, London SW1W 9SZ" from the drop down option
     Then the page should be accessible
 
   Scenario: FM - Detailed Search - New authorised representative details - Add address
@@ -260,9 +256,9 @@ Feature:  FM - Accessibility DA In Draft
     And I am on "New authorised representative details" page
     And I enter the following details into the form:
       | Postcode             | SW1W 9SZ        |
+    And I click on "Find address"
     And I click on enter authorised representative address manually
     And I am on "Add address" page
-    And I click on "Continue"
     Then the page should be accessible
 
   Scenario: FM - Detailed Search - Notices contact details
