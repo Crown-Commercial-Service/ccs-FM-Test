@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Common < SitePrism::Page
   element :header_one, 'h1'
   element :header_two, 'h2'
