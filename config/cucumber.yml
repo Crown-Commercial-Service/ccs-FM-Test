@@ -5,3 +5,4 @@ accessibility: DRIVER=chrome_headless --format html --out tmp/accessibility_test
 wip: --tags @wip:3 --wip features
 bulk_upload: DRIVER=chrome_headless --format html --out tmp/bulk_upload_test_report.html --format pretty -r features --tags '@bulk_upload'
 set_up: DRIVER=chrome_headless --format html --out tmp/set_up_test_report.html --format pretty -r features --tags '@set_up'
+prod_test: DRIVER=chrome TEST_ENV=prod --format html --out docs/reports/<%=Time.now.strftime("%Y%m%d-%H%M%S") %>test-report.html --format pretty -r features --tags '@prod_test'

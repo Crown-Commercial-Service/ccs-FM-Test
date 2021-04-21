@@ -5,6 +5,10 @@ Then('I enter {string} years and {string} months for the contract period') do |y
   requirements.initial_call_off_period_months.set(months)
 end
 
+When("I enter the number of year as {string}") do |years|
+  requirements.initial_call_off_period.set(years)
+end
+
 And(/^I enter values for the initial call-off period date$/) do
   requirements.initial_start_date.day.set(12)
   requirements.initial_start_date.month.set(12)
@@ -1019,6 +1023,102 @@ Then(/^I answer the service questions for building eleven "([^"]*)"$/) do |_buil
   step 'I click on the service question'
   step 'I am on the "Feminine hygiene waste" page'
   step 'I enter 2 for feminine hygiene waste'
+  step 'I click on "Save and return"'
+  step 'I am on the "Service requirements" page'
+  step 'I click on "Return to service requirements summary"'
+  step 'I am on "Service requirements summary" page'
+end
+
+Then(/^I answer the service questions for building twenty six "([^"]*)"$/) do |_building_name|
+  click_on _building_name
+  step 'I am on the "Service requirements" page'
+  step 'I click on the service question'
+  step 'I am on the "Hazardous waste" page'
+  step 'I enter 80 for general waste'
+  step 'I click on "Save and return"'
+  step 'I am on the "Service requirements" page'
+  step 'I click on the service question'
+  step 'I am on the "Clinical waste" page'
+  step 'I enter 80 for general waste'
+  step 'I click on "Save and return"'
+  step 'I am on the "Service requirements" page'
+  step 'I click on the service question'
+  step 'I am on the "Medical waste" page'
+  step 'I enter 80 for general waste'
+  step 'I click on "Save and return"'
+  step 'I am on the "Service requirements" page'
+  step 'I click on "Return to service requirements summary"'
+  step 'I am on "Service requirements summary" page'
+end
+
+Then(/^I answer the service questions for building thirty three "([^"]*)"$/) do |_building_name|
+  click_on _building_name
+  step 'I am on the "Service requirements" page'
+  step 'I click on the service question'
+  step 'I am on the "Catering equipment maintenance" page'
+  step 'I select standard A'
+  step 'I click on "Save and return"'
+  step 'I am on the "Service requirements" page'
+  step 'I click on "Return to service requirements summary"'
+  step 'I am on "Service requirements summary" page'
+end
+
+Then(/^I answer the service questions for contract cost building "([^"]*)"$/) do |_building_name|
+  click_on _building_name
+  step 'I am on the "Service requirements" page'
+  step 'I click on the service question'
+  step 'I am on the "Lifts, hoists & conveyance systems maintenance" page'
+  step 'I enter 50 for number of lift floors'
+  step 'I click on "Save and return"'
+  step 'I am on the "Service requirements" page'
+  step 'I click on the service question'
+  step 'I am on the "Portable appliance testing" page'
+  step 'I enter 90 for portable appliance testing'
+  step 'I click on "Save and return"'
+  step 'I am on the "Service requirements" page'
+  step 'I click on the service question'
+  step 'I am on the "Routine cleaning" page'
+  step 'I enter 40 for routine cleaning'
+  step 'I click on "Save and return"'
+  step 'I am on the "Service requirements" page'
+  step 'I click on the service question'
+  step 'I am on the "Handyman services" page'
+  step 'I enter 1500 for service hours'
+  step 'I click on "Save and return"'
+  step 'I am on the "Service requirements" page'
+  step 'I click on the service question'
+  step 'I am on the "General waste" page'
+  step 'I enter 20 for general waste'
+  step 'I click on "Save and return"'
+  step 'I am on the "Service requirements" page'
+  step 'I click on the service question'
+  step 'I am on the "Classified waste" page'
+  step 'I enter 30 for classified waste'
+  step 'I click on "Save and return"'
+  step 'I am on the "Service requirements" page'
+  step 'I click on the service question'
+  step 'I am on the "Feminine hygiene waste" page'
+  step 'I enter 40 for feminine hygiene waste'
+  step 'I click on "Save and return"'
+  step 'I am on the "Service requirements" page'
+  step 'I click on the service question'
+  step 'I am on the "Mechanical and electrical engineering maintenance" page'
+  step 'I select standard A'
+  step 'I click on "Save and return"'
+  step 'I am on the "Service requirements" page'
+  step 'I click on the service question'
+  step 'I am on the "Lifts, hoists & conveyance systems maintenance" page'
+  step 'I select standard A'
+  step 'I click on "Save and return"'
+  step 'I am on the "Service requirements" page'
+  step 'I click on the service question'
+  step 'I am on the "Routine cleaning" page'
+  step 'I select standard A'
+  step 'I click on "Save and return"'
+  step 'I am on the "Service requirements" page'
+  step 'I click on the service question'
+  step 'I am on the "Cleaning of external areas" page'
+  step 'I select standard A'
   step 'I click on "Save and return"'
   step 'I am on the "Service requirements" page'
   step 'I click on "Return to service requirements summary"'

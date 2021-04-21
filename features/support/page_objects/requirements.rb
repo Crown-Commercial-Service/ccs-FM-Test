@@ -4,6 +4,8 @@ class Requirements < SitePrism::Page
   element :initial_call_off_period_years, '#facilities_management_procurement_initial_call_off_period_years'
   element :initial_call_off_period_months, '#facilities_management_procurement_initial_call_off_period_months'
 
+  element :initial_call_off_period, '#facilities_management_procurement_initial_call_off_period'
+
   section :initial_start_date, 'div.govuk-date-input' do
     element :day, 'input[name="facilities_management_procurement[initial_call_off_start_date_dd]"]'
     element :month, 'input[name="facilities_management_procurement[initial_call_off_start_date_mm]"]'

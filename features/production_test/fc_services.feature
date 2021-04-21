@@ -1,19 +1,18 @@
+@prod_test
 Feature: Direct Award scenario One
 
   Background: Login page
     Given I am a logged in user
-
 
   Scenario: Direct Award Scenario One - TUPE, CAFM, Helpdesk, Management
     Then I should see the navigation panel has sign out link
     When I click on "Quick view suppliers"
     And I am on the "Select the facilities management services that you need" page
     And I click on open all
-    When I select all da services
-    And I select FC only services
+    And I select all services
     And I click on "Continue"
     And I click on open all
-    And I click on the "Tees Valley and Durham"
+    And I select all regions
     And I click on "Continue"
     And I add contract name
     And I click on "Save and continue to procurement"
@@ -29,7 +28,7 @@ Feature: Direct Award scenario One
     And I click on "Save and return"
     And I click on "Contract period"
     And I am on "Contract period" page
-    And I enter the number of year as "1"
+    And I enter '1' years and '0' months for the contract period
     And I enter the day as "12"
     And I enter the month as "10"
     And I enter the year as "2023"
@@ -136,3 +135,23 @@ Feature: Direct Award scenario One
     And I select services for building 33 "33 FC Building"
     And I am on "Assigning services to buildings summary" page
     And I click on "Return to requirements"
+    And I am on "Requirements" page
+    And I click on "Service requirements"
+    And I am on "Service requirements summary" page
+    And I answer the service questions for building one "001 DA & FC Building"
+    And I answer the service questions for building two "002 DA & FC Building"
+    And I answer the service questions for building three "003 DA & FC Building"
+    And I answer the service questions for building five "005 DA & FC Building"
+    And I answer the service questions for building six "006 DA & FC Building"
+    And I answer the service questions for building seven "007 DA & FC Building"
+    And I answer the service questions for building eight "008 DA & FC Building"
+    And I answer the service questions for building nine "009 DA & FC Building"
+    And I answer the service questions for building ten "010 DA & FC Building"
+    And I answer the service questions for building eleven "011 DA & FC Building"
+    And I answer the service questions for building twenty six "26 FC Building"
+    And I answer the service questions for building thirty three "33 FC Building"
+    And I click on "Return to requirements"
+    And I click on "Continue to results"
+    And I am on "Estimated contract cost" page
+    When I click on "Continue"
+    And I am on "Results" page

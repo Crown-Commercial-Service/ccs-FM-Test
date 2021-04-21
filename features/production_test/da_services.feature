@@ -1,4 +1,5 @@
-Feature: Direct Award scenario One
+@prod_test
+Feature: Direct Award prod test
 
   Background: Login page
     Given I am a logged in user
@@ -27,7 +28,7 @@ Feature: Direct Award scenario One
     And I click on "Save and return"
     And I click on "Contract period"
     And I am on "Contract period" page
-    And I enter the number of year as "1"
+    And I enter '1' years and '7' months for the contract period
     And I enter the day as "12"
     And I enter the month as "10"
     And I enter the year as "2023"
@@ -142,5 +143,3 @@ Feature: Direct Award scenario One
     And I am on "Review and generate documents" page
     And I click on "Generate documents"
     And I am on "Review your contract" page
-
-
