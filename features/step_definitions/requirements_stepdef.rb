@@ -5,6 +5,10 @@ Then('I enter {string} years and {string} months for the contract period') do |y
   requirements.initial_call_off_period_months.set(months)
 end
 
+When("I enter the number of year as {string}") do |years|
+  requirements.initial_call_off_period.set(years)
+end
+
 And(/^I enter values for the initial call-off period date$/) do
   requirements.initial_start_date.day.set(12)
   requirements.initial_start_date.month.set(12)
@@ -339,63 +343,262 @@ Then(/^I click on the service question$/) do
 end
 
 Then(/^I select services for first building "([^"]*)"$/) do |_building_name|
-  service_requirements.bms.click
-  service_requirements.env_cleaning.click
-  service_requirements.fire_detection_maintenance.click
-  service_requirements.high_voltage.click
-  service_requirements.internal_external_building.click
-  service_requirements.lifts_hoists.click
-  service_requirements.mech_elec.click
-  service_requirements.security_access.click
-  service_requirements.standby_power.click
-  service_requirements.ventilation.click
-  service_requirements.cafm.click
-  service_requirements.helpdesk.click
-  service_requirements.management_billable
+  check "Mechanical and electrical engineering maintenance"
+  check "Ventilation and air conditioning system maintenance"
+  check "Environmental cleaning service"
+  check "Fire detection and firefighting systems maintenance"
 end
 
 Then(/^I select services for second building "([^"]*)"$/) do |_building_name|
-  service_requirements.asbestos.click
-  service_requirements.compliance_plans.click
-  service_requirements.condition_survey.click
-  service_requirements.electrical_testing.click
-  service_requirements.fire_risk.click
-  service_requirements.portable_appliance.click
-  service_requirements.statutory_inspections.click
-  service_requirements.water_hygiene.click
-  service_requirements.cleaning_external.click
-  service_requirements.cleaning_integral.click
-  service_requirements.deep_periodic_clean.click
-  service_requirements.mobile_cleaning.click
-  service_requirements.pest_control.click
-  service_requirements.external_window_cleaning.click
-  service_requirements.internal_window_cleaning.click
+  check "Security, access and intruder systems maintenance"
+  check "Internal & external building fabric maintenance"
+  check "Building management system (BMS) maintenance"
+  check "Standby power system maintenance"
 end
 
 Then(/^I select services for third building "([^"]*)"$/) do |_building_name|
-  service_requirements.routine_cleaning.click
-  service_requirements.handyman_services.click
-  service_requirements.move_space_manage.click
-  service_requirements.car_park.click
-  service_requirements.reception_services.click
-  service_requirements.taxi_booking.click
-  service_requirements.voice_announce.click
-  service_requirements.cctv.click
-  service_requirements.control_access.click
-  service_requirements.emergency_response.click
-  service_requirements.managements_visitor.click
-  service_requirements.manned_guarding.click
-  service_requirements.patrols_fixed.click
+  check "High voltage (HV) and switchgear maintenance"
+  check "Lifts, hoists & conveyance systems maintenance"
+  check "Asbestos management"
+  check "Water hygiene maintenance"
 end
 
 Then(/^I select services for fourth building "([^"]*)"$/) do |_building_name|
-  service_requirements.classified_waste.click
-  service_requirements.feminine_hygiene.click
-  service_requirements.general_waste.click
-  service_requirements.recycled_waste.click
-  service_requirements.cafm.click
-  service_requirements.helpdesk.click
-  service_requirements.management_billable.click
+  check "Statutory inspections"
+  check "Compliance plans, specialist surveys and audits"
+  check "Conditions survey"
+  check "Electrical testing"
+end
+
+Then(/^I select services for fifth building "([^"]*)"$/) do |_building_name|
+  check "Fire risk assessments"
+  check "Portable appliance testing"
+  check "Routine cleaning"
+  check "Cleaning of integral barrier mats"
+end
+
+Then(/^I select services for sixth building "([^"]*)"$/) do |_building_name|
+  check "Mobile cleaning"
+  check "Deep (periodic) cleaning"
+  check "Window cleaning (external)"
+  check "Window cleaning (internal)"
+end
+
+Then(/^I select services for seventh building "([^"]*)"$/) do |_building_name|
+  check "Pest control services"
+  check "Cleaning of external areas"
+  check "Handyman services"
+  check "Move and space management - internal moves"
+end
+
+Then(/^I select services for eighth building "([^"]*)"$/) do |_building_name|
+  check "Reception service"
+  check "Taxi booking service"
+  check "Car park management and booking"
+  check "Voice announcement system operation"
+end
+
+Then(/^I select services for ninth building "([^"]*)"$/) do |_building_name|
+  check "Manned guarding service"
+  check "Cctv / alarm monitoring"
+  check "Control of access and security passes"
+  check "Emergency response"
+end
+
+Then(/^I select services for tenth building "([^"]*)"$/) do |_building_name|
+  check "Patrols (fixed or static guarding)"
+  check "Management of visitors and passes"
+  check "General waste"
+  check "Recycled waste"
+end
+
+Then(/^I select services for eleventh building "([^"]*)"$/) do |_building_name|
+  check "Classified waste"
+  check "Feminine hygiene waste"
+  check "CAFM system"
+  check "Helpdesk services"
+  check "Management of billable works"
+end
+
+Then(/^I select services for twelfth building "([^"]*)"$/) do |_building_name|
+  check "Pest control services"
+end
+
+Then(/^I select services for building 13 "([^"]*)"$/) do |_building_name|
+  click_on _building_name
+  check "Audio visual (AV) equipment maintenance"
+  check "Television cabling maintenance"
+  check "Mail room equipment maintenance"
+  check "Office machinery servicing and maintenance"
+  step 'I click on "Save and return"'
+end
+
+Then(/^I select services for building 14 "([^"]*)"$/) do |_building_name|
+  click_on _building_name
+  check "Voice announcement system maintenance"
+  check "Locksmith services"
+  check "Airport and aerodrome maintenance services"
+  check "Specialist maintenance services"
+  step 'I click on "Save and return"'
+end
+
+Then(/^I select services for building 15 "([^"]*)"$/) do |_building_name|
+  click_on _building_name
+  check "Grounds maintenance services"
+  check "Tree surgery (arboriculture)"
+  check "Professional snow & ice clearance"
+  check "Reservoirs, ponds, river walls and water features maintenance"
+  step 'I click on "Save and return"'
+end
+
+Then(/^I select services for building 16 "([^"]*)"$/) do |_building_name|
+  click_on _building_name
+  check "Internal planting"
+  check "Cut flowers and christmas trees"
+  check "Building information modelling and government soft landings"
+  check "Chilled potable water"
+  step 'I click on "Save and return"'
+end
+
+Then(/^I select services for building 17 "([^"]*)"$/) do |_building_name|
+  click_on _building_name
+  check "Retail services / convenience store"
+  check "Deli/coffee bar"
+  check "Events and functions"
+  check "Full service restaurant"
+  step 'I click on "Save and return"'
+end
+
+Then(/^I select services for building 18 "([^"]*)"$/) do |_building_name|
+  click_on _building_name
+  check "Hospitality and meetings"
+  check "Outside catering"
+  check "Trolley service"
+  check "Vending services (food & beverage)"
+  step 'I click on "Save and return"'
+end
+
+Then(/^I select services for building 19 "([^"]*)"$/) do |_building_name|
+  click_on _building_name
+  check "Residential catering services"
+  check "Reactive cleaning (outside cleaning operational hours)"
+  check "Cleaning of communications and equipment rooms"
+  check "Housekeeping"
+  step 'I click on "Save and return"'
+end
+
+Then(/^I select services for building 20 "([^"]*)"$/) do |_building_name|
+  click_on _building_name
+  check "It equipment cleaning"
+  check "Specialist cleaning"
+  check "Cleaning of curtains and window blinds"
+  check "Medical and clinical cleaning"
+  step 'I click on "Save and return"'
+end
+
+Then(/^I select services for building 21 "([^"]*)"$/) do |_building_name|
+  click_on _building_name
+  check "Linen and laundry services"
+  check "Clocks"
+  check "Mail services"
+  check "Internal messenger service"
+  step 'I click on "Save and return"'
+end
+
+Then(/^I select services for building 22 "([^"]*)"$/) do |_building_name|
+  click_on _building_name
+  check "Courier booking and external distribution"
+  check "Porterage"
+  check "Signage"
+  check "Archiving (on-site)"
+  step 'I click on "Save and return"'
+end
+
+Then(/^I select services for building 23 "([^"]*)"$/) do |_building_name|
+  click_on _building_name
+  check "Furniture management"
+  check "Space management"
+  check "Cable management"
+  check "Reprographics service"
+  step 'I click on "Save and return"'
+end
+
+Then(/^I select services for building 24 "([^"]*)"$/) do |_building_name|
+  click_on _building_name
+  check "Stores management"
+  check "Portable washroom solutions"
+  check "Administrative support services"
+  check "Reactive guarding"
+  step 'I click on "Save and return"'
+end
+
+Then(/^I select services for building 25 "([^"]*)"$/) do |_building_name|
+  click_on _building_name
+  check "Additional security services"
+  check "Enhanced security requirements"
+  check "Key holding"
+  check "Lock up / open up of buyer premises"
+  step 'I click on "Save and return"'
+end
+
+Then(/^I select services for building 26 "([^"]*)"$/) do |_building_name|
+  click_on _building_name
+  check "Patrols (mobile via a specific visiting vehicle)"
+  check "Hazardous waste"
+  check "Clinical waste"
+  check "Medical waste"
+  step 'I click on "Save and return"'
+end
+
+Then(/^I select services for building 27 "([^"]*)"$/) do |_building_name|
+  click_on _building_name
+  check "Childcare facility"
+  check "Sports and leisure"
+  check "Driver and vehicle service"
+  check "First aid and medical service"
+  step 'I click on "Save and return"'
+end
+
+Then(/^I select services for building 28 "([^"]*)"$/) do |_building_name|
+  click_on _building_name
+  check "Flag flying service"
+  check "Journal, magazine and newspaper supply"
+  step 'I click on "Save and return"'
+end
+
+Then(/^I select services for building 29 "([^"]*)"$/) do |_building_name|
+  click_on _building_name
+  check "Hairdressing services"
+  check "Footwear cobbling services"
+  step 'I click on "Save and return"'
+end
+
+Then(/^I select services for building 30 "([^"]*)"$/) do |_building_name|
+  click_on _building_name
+  check "Provision of chaplaincy support services"
+  check "Housing and residential accommodation management"
+  step 'I click on "Save and return"'
+end
+
+Then(/^I select services for building 31 "([^"]*)"$/) do |_building_name|
+  click_on _building_name
+  check "Training establishment management and booking service"
+  step 'I click on "Save and return"'
+end
+
+Then(/^I select services for building 32 "([^"]*)"$/) do |_building_name|
+  click_on _building_name
+  check "First aid and medical service"
+  step 'I click on "Save and return"'
+end
+
+Then(/^I select services for building 33 "([^"]*)"$/) do |_building_name|
+  click_on _building_name
+  check "Catering equipment maintenance"
+  check "Reactive maintenance services"
+  check "Planned / group re-lamping service"
+  check "Automated barrier control system maintenance"
+  step 'I click on "Save and return"'
 end
 
 When(/^I select services with no service questions$/) do
@@ -569,4 +772,355 @@ And(/^for scenario 3, I add the details for "([^"]*)" building$/) do |building|
   step 'I am on the "Mobile cleaning services" page'
   step 'I select standard A'
   step 'I click on "Save and return"'
+end
+
+And(/^for scenario 0, lot 1a I add the details for "([^"]*)" building$/) do |building|
+  step 'I navigate to buildings page'
+  step "I find and select \"#{building}\""
+  step 'I navigate to Assigning services to buildings summary page'
+  step "I click on \"#{building}\""
+  step 'I select all services for first building'
+  step 'I navigate to Service requirements summary page'
+  step "I click on \"#{building}\""
+  step 'I am on the "Service requirements" page'
+  step 'I click on the service question'
+  step 'I am on the "Routine cleaning" page'
+  step 'I enter 34 for routine cleaning'
+  step 'I click on "Save and return"'
+  step 'I click on the service question'
+  step 'I am on the "Reception service" page'
+  step 'I enter 6240 for service hours'
+  step 'I click on "Save and return"'
+  step 'I click on the service question'
+  step 'I am on the "General waste" page'
+  step 'I enter 130 for general waste'
+  step 'I click on "Save and return"'
+  step 'I click on the service question'
+  step 'I am on the "Mechanical and electrical engineering maintenance" page'
+  step 'I select standard A'
+  step 'I click on "Save and return"'
+  step 'I click on the service question'
+  step 'I am on the "Routine cleaning" page'
+  step 'I select standard A'
+end
+
+Then(/^I answer the service questions for building one "([^"]*)"$/) do |_building_name|
+  click_on _building_name
+  step 'I am on the "Service requirements" page'
+  step 'I click on the service question'
+  step 'I am on the "Mechanical and electrical engineering maintenance" page'
+  step 'I select standard A'
+  step 'I click on "Save and return"'
+  step 'I am on the "Service requirements" page'
+  step 'I click on the service question'
+  step 'I am on the "Ventilation and air conditioning system maintenance" page'
+  step 'I select standard A'
+  step 'I click on "Save and return"'
+  step 'I am on the "Service requirements" page'
+  step 'I click on the service question'
+  step 'I am on the "Environmental cleaning service" page'
+  step 'I select standard A'
+  step 'I click on "Save and return"'
+  step 'I am on the "Service requirements" page'
+  step 'I click on the service question'
+  step 'I am on the "Fire detection and firefighting systems maintenance" page'
+  step 'I select standard A'
+  step 'I click on "Save and return"'
+  step 'I am on the "Service requirements" page'
+  step 'I click on "Return to service requirements summary"'
+  step 'I am on "Service requirements summary" page'
+end
+
+Then(/^I answer the service questions for building two "([^"]*)"$/) do |_building_name|
+  click_on _building_name
+  step 'I am on the "Service requirements" page'
+  step 'I click on the service question'
+  step 'I am on the "Security, access and intruder systems maintenance" page'
+  step 'I select standard A'
+  step 'I click on "Save and return"'
+  step 'I am on the "Service requirements" page'
+  step 'I click on the service question'
+  step 'I am on the "Internal & external building fabric maintenance" page'
+  step 'I select standard A'
+  step 'I click on "Save and return"'
+  step 'I am on the "Service requirements" page'
+  step 'I click on the service question'
+  step 'I am on the "Building management system (BMS) maintenance" page'
+  step 'I select standard A'
+  step 'I click on "Save and return"'
+  step 'I am on the "Service requirements" page'
+  step 'I click on the service question'
+  step 'I am on the "Standby power system maintenance" page'
+  step 'I select standard A'
+  step 'I click on "Save and return"'
+  step 'I am on the "Service requirements" page'
+  step 'I click on "Return to service requirements summary"'
+  step 'I am on "Service requirements summary" page'
+end
+
+Then(/^I answer the service questions for building three "([^"]*)"$/) do |_building_name|
+  click_on _building_name
+  step 'I am on the "Service requirements" page'
+  step 'I click on the service question'
+  step 'I am on the "Lifts, hoists & conveyance systems maintenance" page'
+  step 'I enter 2 for number of lift floors'
+  step 'I click on "Save and return"'
+  step 'I am on the "Service requirements" page'
+  step 'I click on the service question'
+  step 'I am on the "High voltage (HV) and switchgear maintenance" page'
+  step 'I select standard A'
+  step 'I click on "Save and return"'
+  step 'I am on the "Service requirements" page'
+  step 'I click on the service question'
+  step 'I am on the "Lifts, hoists & conveyance systems maintenance" page'
+  step 'I select standard A'
+  step 'I click on "Save and return"'
+  step 'I am on the "Service requirements" page'
+  step 'I click on "Return to service requirements summary"'
+  step 'I am on "Service requirements summary" page'
+end
+
+Then(/^I answer the service questions for building five "([^"]*)"$/) do |_building_name|
+  click_on _building_name
+  step 'I am on the "Service requirements" page'
+  step 'I click on the service question'
+  step 'I am on the "Portable appliance testing" page'
+  step 'I enter 9 for portable appliance testing'
+  step 'I click on "Save and return"'
+  step 'I click on the service question'
+  step 'I am on the "Routine cleaning" page'
+  step 'I enter 4 for routine cleaning'
+  step 'I click on "Save and return"'
+  step 'I click on the service question'
+  step 'I am on the "Routine cleaning" page'
+  step 'I select standard A'
+  step 'I click on "Save and return"'
+  step 'I am on the "Service requirements" page'
+  step 'I click on "Return to service requirements summary"'
+  step 'I am on "Service requirements summary" page'
+end
+
+Then(/^I answer the service questions for building six "([^"]*)"$/) do |_building_name|
+  click_on _building_name
+  step 'I am on the "Service requirements" page'
+  step 'I click on the service question'
+  step 'I am on the "Mobile cleaning services" page'
+  step 'I enter 9 for mobile cleaning service'
+  step 'I click on "Save and return"'
+  step 'I click on the service question'
+  step 'I am on the "Mobile cleaning services" page'
+  step 'I select standard A'
+  step 'I click on "Save and return"'
+  step 'I click on the service question'
+  step 'I am on the "Deep (periodic) cleaning" page'
+  step 'I select standard A'
+  step 'I click on "Save and return"'
+  step 'I am on the "Service requirements" page'
+  step 'I click on "Return to service requirements summary"'
+  step 'I am on "Service requirements summary" page'
+end
+
+Then(/^I answer the service questions for building seven "([^"]*)"$/) do |_building_name|
+  click_on _building_name
+  step 'I am on the "Service requirements" page'
+  step 'I click on the service question'
+  step 'I am on the "Handyman services" page'
+  step 'I enter 1248 for service hours'
+  step 'I click on "Save and return"'
+  step 'I click on the service question'
+  step 'I am on the "Move and space management - internal moves" page'
+  step 'I enter 1248 for service hours'
+  step 'I click on "Save and return"'
+  step 'I am on the "Service requirements" page'
+  step 'I click on the service question'
+  step 'I am on the "Cleaning of external areas" page'
+  step 'I select standard A'
+  step 'I click on "Save and return"'
+  step 'I am on the "Service requirements" page'
+  step 'I click on "Return to service requirements summary"'
+  step 'I am on "Service requirements summary" page'
+end
+
+Then(/^I answer the service questions for building eight "([^"]*)"$/) do |_building_name|
+  click_on _building_name
+  step 'I am on the "Service requirements" page'
+  step 'I click on the service question'
+  step 'I am on the "Reception service" page'
+  step 'I enter 1248 for service hours'
+  step 'I click on "Save and return"'
+  step 'I click on the service question'
+  step 'I am on the "Taxi booking service" page'
+  step 'I enter 1248 for service hours'
+  step 'I click on "Save and return"'
+  step 'I click on the service question'
+  step 'I am on the "Car park management and booking" page'
+  step 'I enter 1248 for service hours'
+  step 'I click on "Save and return"'
+  step 'I click on the service question'
+  step 'I am on the "Voice announcement system operation" page'
+  step 'I enter 1248 for service hours'
+  step 'I click on "Save and return"'
+  step 'I am on the "Service requirements" page'
+  step 'I click on "Return to service requirements summary"'
+  step 'I am on "Service requirements summary" page'
+end
+
+Then(/^I answer the service questions for building nine "([^"]*)"$/) do |_building_name|
+  click_on _building_name
+  step 'I am on the "Service requirements" page'
+  step 'I click on the service question'
+  step 'I am on the "Manned guarding service" page'
+  step 'I enter 1248 for service hours'
+  step 'I click on "Save and return"'
+  step 'I click on the service question'
+  step 'I am on the "Cctv / alarm monitoring" page'
+  step 'I enter 1248 for service hours'
+  step 'I click on "Save and return"'
+  step 'I click on the service question'
+  step 'I am on the "Control of access and security passes" page'
+  step 'I enter 1248 for service hours'
+  step 'I click on "Save and return"'
+  step 'I click on the service question'
+  step 'I am on the "Emergency response" page'
+  step 'I enter 1248 for service hours'
+  step 'I click on "Save and return"'
+  step 'I am on the "Service requirements" page'
+  step 'I click on "Return to service requirements summary"'
+  step 'I am on "Service requirements summary" page'
+end
+
+Then(/^I answer the service questions for building ten "([^"]*)"$/) do |_building_name|
+  click_on _building_name
+  step 'I am on the "Service requirements" page'
+  step 'I click on the service question'
+  step 'I am on the "Patrols (fixed or static guarding)" page'
+  step 'I enter 1248 for service hours'
+  step 'I click on "Save and return"'
+  step 'I click on the service question'
+  step 'I am on the "Management of visitors and passes" page'
+  step 'I enter 1248 for service hours'
+  step 'I click on "Save and return"'
+  step 'I click on the service question'
+  step 'I am on the "General waste" page'
+  step 'I enter 2 for general waste'
+  step 'I click on "Save and return"'
+  step 'I click on the service question'
+  step 'I am on the "Recycled waste" page'
+  step 'I enter 2 for recycled waste'
+  step 'I click on "Save and return"'
+  step 'I am on the "Service requirements" page'
+  step 'I click on "Return to service requirements summary"'
+  step 'I am on "Service requirements summary" page'
+end
+
+Then(/^I answer the service questions for building eleven "([^"]*)"$/) do |_building_name|
+  click_on _building_name
+  step 'I am on the "Service requirements" page'
+  step 'I click on the service question'
+  step 'I am on the "Classified waste" page'
+  step 'I enter 2 for classified waste'
+  step 'I click on "Save and return"'
+  step 'I click on the service question'
+  step 'I am on the "Feminine hygiene waste" page'
+  step 'I enter 2 for feminine hygiene waste'
+  step 'I click on "Save and return"'
+  step 'I am on the "Service requirements" page'
+  step 'I click on "Return to service requirements summary"'
+  step 'I am on "Service requirements summary" page'
+end
+
+Then(/^I answer the service questions for building twenty six "([^"]*)"$/) do |_building_name|
+  click_on _building_name
+  step 'I am on the "Service requirements" page'
+  step 'I click on the service question'
+  step 'I am on the "Hazardous waste" page'
+  step 'I enter 80 for general waste'
+  step 'I click on "Save and return"'
+  step 'I am on the "Service requirements" page'
+  step 'I click on the service question'
+  step 'I am on the "Clinical waste" page'
+  step 'I enter 80 for general waste'
+  step 'I click on "Save and return"'
+  step 'I am on the "Service requirements" page'
+  step 'I click on the service question'
+  step 'I am on the "Medical waste" page'
+  step 'I enter 80 for general waste'
+  step 'I click on "Save and return"'
+  step 'I am on the "Service requirements" page'
+  step 'I click on "Return to service requirements summary"'
+  step 'I am on "Service requirements summary" page'
+end
+
+Then(/^I answer the service questions for building thirty three "([^"]*)"$/) do |_building_name|
+  click_on _building_name
+  step 'I am on the "Service requirements" page'
+  step 'I click on the service question'
+  step 'I am on the "Catering equipment maintenance" page'
+  step 'I select standard A'
+  step 'I click on "Save and return"'
+  step 'I am on the "Service requirements" page'
+  step 'I click on "Return to service requirements summary"'
+  step 'I am on "Service requirements summary" page'
+end
+
+Then(/^I answer the service questions for contract cost building "([^"]*)"$/) do |_building_name|
+  click_on _building_name
+  step 'I am on the "Service requirements" page'
+  step 'I click on the service question'
+  step 'I am on the "Lifts, hoists & conveyance systems maintenance" page'
+  step 'I enter 50 for number of lift floors'
+  step 'I click on "Save and return"'
+  step 'I am on the "Service requirements" page'
+  step 'I click on the service question'
+  step 'I am on the "Portable appliance testing" page'
+  step 'I enter 90 for portable appliance testing'
+  step 'I click on "Save and return"'
+  step 'I am on the "Service requirements" page'
+  step 'I click on the service question'
+  step 'I am on the "Routine cleaning" page'
+  step 'I enter 40 for routine cleaning'
+  step 'I click on "Save and return"'
+  step 'I am on the "Service requirements" page'
+  step 'I click on the service question'
+  step 'I am on the "Handyman services" page'
+  step 'I enter 1500 for service hours'
+  step 'I click on "Save and return"'
+  step 'I am on the "Service requirements" page'
+  step 'I click on the service question'
+  step 'I am on the "General waste" page'
+  step 'I enter 20 for general waste'
+  step 'I click on "Save and return"'
+  step 'I am on the "Service requirements" page'
+  step 'I click on the service question'
+  step 'I am on the "Classified waste" page'
+  step 'I enter 30 for classified waste'
+  step 'I click on "Save and return"'
+  step 'I am on the "Service requirements" page'
+  step 'I click on the service question'
+  step 'I am on the "Feminine hygiene waste" page'
+  step 'I enter 40 for feminine hygiene waste'
+  step 'I click on "Save and return"'
+  step 'I am on the "Service requirements" page'
+  step 'I click on the service question'
+  step 'I am on the "Mechanical and electrical engineering maintenance" page'
+  step 'I select standard A'
+  step 'I click on "Save and return"'
+  step 'I am on the "Service requirements" page'
+  step 'I click on the service question'
+  step 'I am on the "Lifts, hoists & conveyance systems maintenance" page'
+  step 'I select standard A'
+  step 'I click on "Save and return"'
+  step 'I am on the "Service requirements" page'
+  step 'I click on the service question'
+  step 'I am on the "Routine cleaning" page'
+  step 'I select standard A'
+  step 'I click on "Save and return"'
+  step 'I am on the "Service requirements" page'
+  step 'I click on the service question'
+  step 'I am on the "Cleaning of external areas" page'
+  step 'I select standard A'
+  step 'I click on "Save and return"'
+  step 'I am on the "Service requirements" page'
+  step 'I click on "Return to service requirements summary"'
+  step 'I am on "Service requirements summary" page'
 end

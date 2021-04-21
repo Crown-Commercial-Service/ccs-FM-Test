@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
 class Common < SitePrism::Page
-  set_url ''
-
   element :header_one, 'h1'
   element :header_two, 'h2'
   element :header_three, 'legend'

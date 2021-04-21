@@ -8,7 +8,7 @@ end
 
 Given(/^I am a logged in user - buildings account$/) do
   visit '/sign-in'
-  sign_in_building
+  sign_in
   puts ENV['HOST']
 end
 

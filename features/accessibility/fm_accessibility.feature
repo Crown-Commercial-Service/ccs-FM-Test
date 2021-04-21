@@ -23,7 +23,7 @@ Feature:  FM - Accessibility
     Then the page should be accessible
 
   Scenario: FM - Procurement dashboard
-    Given I am a logged in user
+    Given I am a logged in user - buildings account
     When I click on "Continue a procurement"
     And I am on "Procurements dashboard" page
     Then the page should be accessible

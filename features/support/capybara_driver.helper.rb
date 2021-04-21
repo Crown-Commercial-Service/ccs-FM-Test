@@ -14,7 +14,6 @@ Capybara.register_driver :chrome do |app|
   capabilities = Selenium::WebDriver::Remote::Capabilities.chrome(
     chromeOptions: { w3c: false }
   )
-
   Capybara::Selenium::Driver.new(
     app,
     browser: :chrome,
